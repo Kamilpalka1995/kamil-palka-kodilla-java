@@ -10,20 +10,29 @@ public class ShapeCollector {
         shapes.add(shape);
     }
 
-    public void removeFigure(Shape shape) {
-        shapes.remove(shape);
+    public boolean removeFigure(Shape shape) {
+        if (!shapes.contains(shape)) {
+            return false;
+        }
+        return shapes.remove(shape);
     }
 
     public Shape getFigure(int n) {
+        if (n > shapes.size()) {
+            return null;
+        }
         return shapes.get(n);
     }
 
     public String showFigures() {
-        String result = "";
-        for(Shape shape: shapes) {
-           result = result + shape.getShapeName() + " ";
+        StringBuilder result = new StringBuilder();
+
+        for (Shape shape : shapes) {
+            result.append(shape.getShapeName())
+                    .append(" ");
         }
-        return result;
+
+        return result.toString();
     }
 
     public int getSize() {
