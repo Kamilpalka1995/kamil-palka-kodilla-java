@@ -141,5 +141,4 @@ public class ForumStatisticsTestSuite {
         assertEquals(10.0, forumStatistics.getAveragePostsPerUser());
         assertEquals(50.0, forumStatistics.getAverageCommentsPerUser());
     }
-
 }
