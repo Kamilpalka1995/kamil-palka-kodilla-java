@@ -3,10 +3,13 @@ package com.kodilla.testing.forum.statistics;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -59,6 +62,8 @@ public class ForumStatisticsTestSuite {
         // Then
         assertEquals(1000, forumStatistics.getPostsCount());
         assertEquals(100.0, forumStatistics.getAveragePostsPerUser());
+        assertEquals(50.0, forumStatistics.getAverageCommentsPerUser());
+        assertEquals(0.5, forumStatistics.getAverageCommentsPerPost());
     }
 
     @Test

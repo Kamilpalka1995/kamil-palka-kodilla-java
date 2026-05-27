@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-@Nested
 @ExtendWith(MockitoExtension.class)
 class BookDirectoryTestSuite {
     private List<Book> generateListOfNBooks(int booksQuantity) {
@@ -82,7 +81,6 @@ class BookDirectoryTestSuite {
     void testListBooksWithConditionFragmentShorterThan3() {
 
         // Given
-        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         // When
@@ -96,7 +94,6 @@ class BookDirectoryTestSuite {
     @Test
     void testListBooksInHandsOfWithNoBooks() {
         // Given
-        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         LibraryUser libraryUser = new LibraryUser("John", "Smith", "2008");

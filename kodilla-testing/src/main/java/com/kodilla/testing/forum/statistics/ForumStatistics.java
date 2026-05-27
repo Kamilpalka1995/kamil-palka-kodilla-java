@@ -55,15 +55,4 @@ public class ForumStatistics {
         return averageCommentsPerPost;
     }
 
-    public void showStatistics() {
-
-        System.out.println("Users count: " + usersCount);
-        System.out.println("Posts count: " + postsCount);
-        System.out.println("Comments count: " + commentsCount);
-
-        System.out.println("Average posts per user: " + averagePostsPerUser);
-        System.out.println("Average comments per user: " + averageCommentsPerUser);
-        System.out.println("Average comments per post: " + averageCommentsPerPost);
-    }
-
 }
